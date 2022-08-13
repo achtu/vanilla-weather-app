@@ -1,15 +1,15 @@
 body, html {
     height: 100%;
-    background-color: floralwhite;
+    background-color: rgb(164, 179, 169);
 }
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/dave-hoefler-HT_tLT8mGLA-unsplash.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/andres-molina-5boA6Onp77c-unsplash.jpg");
     height: 70%;
     background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .hero-text {
     text-align: center;
@@ -20,15 +20,30 @@ body, html {
     color: white;
 }
 #submit-input {
-    border-radius: 10px;
-    padding-left: 10px;
+    border-radius: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px ;
+    padding-bottom: 5px;
+    background-color: rgb(164, 179, 169);
+    border: 1px solid #dadde1;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200px;
 }
 #text-input {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200px;
     border-radius: 30px;
     padding-left: 10px;
     padding-right: 70px;
     padding-top: 5px;
     padding-bottom: 5px;
+    background-color: rgb(164, 179, 169);
+    border: 1px solid #dadde1;
 }
 h1 {
     color: black;
@@ -42,6 +57,12 @@ h1 {
     display: block;
     text-align: center;
     margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200px;
+
+
 }
 .container {
     display: block;
@@ -65,6 +86,10 @@ ul {
     font-size: 16px;
     font-weight: 100;
     line-height: 19px;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200px;
   }
   
   li:first-letter {
@@ -83,17 +108,25 @@ ul {
     margin-right: 5px;
     height: 64px;
     width: 64px;
+    
   }
   
   .weather-temperature strong {
     color: rgb(33, 33, 33);
     font-size: 64px;
     line-height: 1;
-    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200px;
   }
   
   .weather-temperature .units {
     position: relative;
     font-size: 16px;
     top: -34px;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200px;
   }  
