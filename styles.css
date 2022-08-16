@@ -1,132 +1,139 @@
+
+
 body, html {
-    height: 100%;
-    background-color: rgb(164, 179, 169);
+  height: 100%;
+  background-color: rgb(164, 179, 169);
 }
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/andres-molina-5boA6Onp77c-unsplash.jpg");
-    height: 70%;
-    background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  margin-bottom: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/andres-molina-5boA6Onp77c-unsplash.jpg");
+  height: 70%;
+  background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+margin-bottom: 20px;
 }
 .hero-text {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 #submit-input {
-    border-radius: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 5px ;
-    padding-bottom: 5px;
-    background-color: rgb(164, 179, 169);
-    border: 1px solid #dadde1;
-    font-family: 'Inter', sans-serif;
-    font-family: 'Quicksand', sans-serif;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 200px;
+  border-radius: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px ;
+  padding-bottom: 5px;
+  background-color: rgb(164, 179, 169);
+  border: 1px solid #dadde1;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200px;
 }
 #text-input {
-    font-family: 'Inter', sans-serif;
-    font-family: 'Quicksand', sans-serif;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 200px;
-    border-radius: 30px;
-    padding-left: 10px;
-    padding-right: 70px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    background-color: rgb(164, 179, 169);
-    border: 1px solid #dadde1;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200px;
+  border-radius: 30px;
+  padding-left: 10px;
+  padding-right: 70px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgb(164, 179, 169);
+  border: 1px solid #dadde1;
 }
 h1 {
-    color: black;
-  font-size: 62px;
-  font-weight: 100;
-  line-height: 28px;
-  margin-bottom: 10;
-  text-align: center;
+  color: black;
+font-size: 62px;
+font-weight: 100;
+line-height: 28px;
+margin-bottom: 10;
+text-align: center;
 }
 #small {
-    display: block;
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: 'Inter', sans-serif;
-    font-family: 'Quicksand', sans-serif;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 200px;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200px;
 
 
 }
 .container {
-    display: block;
-    border-radius: 15px;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #dadde1;
-    padding-top: 30px;
-    padding-bottom: 30px;
+  display: block;
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #dadde1;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 ul {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200px;
+}
+
+li:first-letter {
+  text-transform: capitalize;
+}
+.weather-app-wrapper {
+  max-width: 600px;
+  margin-left: 77px;
+}
+
+.overview {
+  margin-bottom: 20px;
+}
+
+.weather-temperature img {
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
   
-  li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  
-    font-size: 16px;
-    font-weight: 100;
-    line-height: 19px;
-    font-family: 'Inter', sans-serif;
-    font-family: 'Quicksand', sans-serif;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 200px;
-  }
-  
-  li:first-letter {
-    text-transform: capitalize;
-  }
-  .weather-app-wrapper {
-    max-width: 600px;
-    margin-left: 77px;
-  }
-  
-  .overview {
-    margin-bottom: 20px;
-  }
-  
-  .weather-temperature img {
-    margin-right: 5px;
-    height: 64px;
-    width: 64px;
-    
-  }
-  
-  .weather-temperature strong {
-    color: rgb(33, 33, 33);
-    font-size: 64px;
-    line-height: 1;
-    font-family: 'Inter', sans-serif;
-    font-family: 'Quicksand', sans-serif;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 200px;
-  }
-  
-  .weather-temperature .units {
-    position: relative;
-    font-size: 16px;
-    top: -34px;
-    font-family: 'Inter', sans-serif;
-    font-family: 'Quicksand', sans-serif;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 200px;
-  }  
+}
+
+.weather-temperature strong {
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  line-height: 1;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200px;
+}
+
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200px;
+}  
+h2{
+  font-family: 'Inter', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
