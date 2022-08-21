@@ -1,5 +1,6 @@
 function displayTemperature(response){
     console.log(response.data)
+    celciusTemp = response.data.main.temp;
     document.querySelector("#city").innerHTML = response.data.name
     document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp)
     document.querySelector("#wind").innerHTML = `Wind: ${response.data.wind.speed} %`;
@@ -8,7 +9,6 @@ function displayTemperature(response){
     document.querySelector("#time").innerHTML = formatDate(response.data.dt * 1000);
     document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.wweather[0].icon}@2x.png`)
 };
-
 
 function formatDate (timestamp){
     let days = [
@@ -29,7 +29,7 @@ function formatDate (timestamp){
     let minutes = date.getMinutes();
     if(minutes < 10)
     {
-    minutes = `0${minutes}`
+        minutes = `0${minutes}`
     }
     return `${day}, ${hours}:${minutes}`
 }
@@ -38,10 +38,24 @@ function search(city){
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios(apiUrl).then(displayTemperature);
 }
-//search("New York")
+search("New York")
 function handleSubmit(event){
     event.preventDefault();
     let cityElement = document.querySelector("#text-input");
-        search(cityElement.value);
+    search(cityElement.value);
 };
 document.querySelector("#form").addEventListener("submit", handleSubmit)
+
+function showFahrenheitTemp (event){
+    event.preventDefault();
+    let fahrenheitTemperature = (celciusTemp * 9) / 5 + 32;
+    document.querySelector("#temperature").innerHTML = Math.round(fahrenheitTemperature)
+}
+function showCelciusTemp (event){
+    event.preventDefault();
+    let tempElement = document.querySelector("#temperature");
+    tempElement.innerHTML = Math.round(celciusTemp);
+}
+let celciusTemp = null;
+document.querySelector("#fahrenheit-link").addEventListener("click", showFahrenheitTemp)
+document.querySelector("#celcius-link").addEventListener("click", showCelciusTemp)
