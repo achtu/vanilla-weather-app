@@ -137,3 +137,11 @@ h2{
   font-family: 'Quicksand', sans-serif;
   font-family: 'Raleway', sans-serif;
 }
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+
+}
+.weather-forecsast-min {
+  opacity: 60%;
+}

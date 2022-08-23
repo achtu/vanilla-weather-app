@@ -7,7 +7,7 @@ function displayTemperature(response){
     document.querySelector("#description").innerHTML = `${response.data.weather[0].description}`;
     document.querySelector("#humidity").innerHTML = `Humidity: ${response.data.main.humidity}%`;
     document.querySelector("#time").innerHTML = formatDate(response.data.dt * 1000);
-    document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.wweather[0].icon}@2x.png`)
+    document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.wweather[0].icon}@2x.png`);
 };
 
 function formatDate (timestamp){
@@ -45,17 +45,36 @@ function handleSubmit(event){
     search(cityElement.value);
 };
 document.querySelector("#form").addEventListener("submit", handleSubmit)
-
 function showFahrenheitTemp (event){
     event.preventDefault();
     let fahrenheitTemperature = (celciusTemp * 9) / 5 + 32;
     document.querySelector("#temperature").innerHTML = Math.round(fahrenheitTemperature)
-}
+};
 function showCelciusTemp (event){
     event.preventDefault();
     let tempElement = document.querySelector("#temperature");
     tempElement.innerHTML = Math.round(celciusTemp);
-}
+};
 let celciusTemp = null;
 document.querySelector("#fahrenheit-link").addEventListener("click", showFahrenheitTemp)
 document.querySelector("#celcius-link").addEventListener("click", showCelciusTemp)
+function displayForecast(){
+    let forecastElement = document.querySelector("#forecast");
+    let forecasrHTML = `<div class="row">`;
+    let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+    days.forEach(function(day){
+    forecasrHTML = forecasrHTML + `
+        <div class="col-2">
+            <div class="weather-forecast date">${day}</div>
+             <img src="img/sunny.png" alt="icons" id="weather-icons" width="42">
+                    <div class="weather-forecast-temp">
+                        <span class="weather-forecast-max">18º</span>
+                        <span class="weather-forecsast-min">12º</span>
+                    </div>
+                </div>
+         `;
+})
+    forecasrHTML = forecasrHTML + `</div>`
+    forecastElement.innerHTML = forecasrHTML;
+};
+displayForecast()
