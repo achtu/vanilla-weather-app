@@ -2,7 +2,7 @@
 
 body, html {
   height: 100%;
-  background-color: rgb(160, 170, 164);
+  background-color: rgb(170, 184, 176);
 }
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/andres-molina-5boA6Onp77c-unsplash.jpg");
