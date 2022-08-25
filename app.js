@@ -1,5 +1,13 @@
+ function getForecast(coordinates){
+    console.log(coordinates)
+    let apiKey = "f1cb380c1c026f0fa6c4898675e1a3ca"
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+    console.log(apiUrl)
+    axios.get(apiUrl).then(displayForecast);
+};
+
 function displayTemperature(response){
-    console.log(response.data)
+    //console.log(response.data)
     celciusTemp = response.data.main.temp;
     document.querySelector("#city").innerHTML = response.data.name
     document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp)
@@ -7,7 +15,9 @@ function displayTemperature(response){
     document.querySelector("#description").innerHTML = `${response.data.weather[0].description}`;
     document.querySelector("#humidity").innerHTML = `Humidity: ${response.data.main.humidity}%`;
     document.querySelector("#time").innerHTML = formatDate(response.data.dt * 1000);
-    document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.wweather[0].icon}@2x.png`);
+   document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    getForecast(response.data.coord);
+   
 };
 
 function formatDate (timestamp){
@@ -58,10 +68,17 @@ function showCelciusTemp (event){
 let celciusTemp = null;
 document.querySelector("#fahrenheit-link").addEventListener("click", showFahrenheitTemp)
 document.querySelector("#celcius-link").addEventListener("click", showCelciusTemp)
-function displayForecast(){
+
+function displayForecast(response){
+    console.log(response.data.daily)
     let forecastElement = document.querySelector("#forecast");
     let forecasrHTML = `<div class="row">`;
-    let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+    let days = ["Mon",
+     "Tue", 
+     "Wed",
+      "Thu", 
+      "Fri",
+    "Sat"];
     days.forEach(function(day){
     forecasrHTML = forecasrHTML + `
         <div class="col-2">
