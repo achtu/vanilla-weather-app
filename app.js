@@ -7,7 +7,7 @@
 };
 
 function displayTemperature(response){
-    //console.log(response.data)
+    
     celciusTemp = response.data.main.temp;
     document.querySelector("#city").innerHTML = response.data.name
     document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp)
@@ -68,9 +68,20 @@ function showCelciusTemp (event){
 let celciusTemp = null;
 document.querySelector("#fahrenheit-link").addEventListener("click", showFahrenheitTemp)
 document.querySelector("#celcius-link").addEventListener("click", showCelciusTemp)
-
+function formateDay(timestamp){
+let date = new Date(timestamp * 1000);
+let day = date.getDay();
+let days = ["Mon",
+"Tue", 
+"Wed",
+"Thu", 
+"Fri",
+"Sat",
+"Sun"];
+return days[day];
+};
 function displayForecast(response){
-    console.log(response.data.daily)
+    let forecast = response.data.daily;
     let forecastElement = document.querySelector("#forecast");
     let forecasrHTML = `<div class="row">`;
     let days = ["Mon",
@@ -79,17 +90,19 @@ function displayForecast(response){
       "Thu", 
       "Fri",
     "Sat"];
-    days.forEach(function(day){
+    forecast.forEach(function(forecastDay, index){
+        if(index < 6){
     forecasrHTML = forecasrHTML + `
         <div class="col-2">
-            <div class="weather-forecast date">${day}</div>
-             <img src="img/sunny.png" alt="icons" id="weather-icons" width="42">
+            <div class="weather-forecast date">${formateDay(forecastDay.dt)}</div>
+            
+             <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="icons" id="weather-icons" width="42">
                     <div class="weather-forecast-temp">
-                        <span class="weather-forecast-max">18º</span>
-                        <span class="weather-forecsast-min">12º</span>
+                        <span class="weather-forecast-max">${Math.round(forecastDay.temp.max)}º</span>
+                        <span class="weather-forecsast-min">${Math.round(forecastDay.temp.min)}º</span>
                     </div>
                 </div>
-         `;
+         `;}
 })
     forecasrHTML = forecasrHTML + `</div>`
     forecastElement.innerHTML = forecasrHTML;
