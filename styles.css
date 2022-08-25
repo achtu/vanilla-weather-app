@@ -14,6 +14,7 @@ position: relative;
 margin-bottom: 20px;
 }
 .hero-text {
+  
   text-align: center;
   position: absolute;
   top: 50%;
@@ -21,6 +22,7 @@ margin-bottom: 20px;
   transform: translate(-50%, -50%);
   color: white;
 }
+
 #submit-input {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -138,6 +140,7 @@ h2{
   font-family: 'Inter', sans-serif;
   font-family: 'Quicksand', sans-serif;
   font-family: 'Raleway', sans-serif;
+  font-size: 67px;
 }
 .weather-forecast {
   margin-top: 20px;
