@@ -2,10 +2,10 @@
 
 body, html {
   height: 100%;
-  background-color: rgb(170, 184, 176);
+  background-color: rgb(187, 191, 189);
 }
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/andres-molina-5boA6Onp77c-unsplash.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("img/berg.jpg");
   height: 70%;
   background-position: center;
 background-repeat: no-repeat;
@@ -31,7 +31,7 @@ margin-bottom: 20px;
   padding-right: 30px;
   padding-top: 5px ;
   padding-bottom: 5px;
-  background-color: rgb(164, 179, 169);
+  background-color: rgb(187, 191, 189);
   border: 1px solid #dadde1;
   font-family: 'Inter', sans-serif;
   font-family: 'Quicksand', sans-serif;
@@ -48,7 +48,7 @@ margin-bottom: 20px;
   padding-right: 70px;
   padding-top: 5px;
   padding-bottom: 5px;
-  background-color: rgb(164, 179, 169);
+  background-color: rgb(187, 191, 189);
   border: 1px solid #dadde1;
 }
 h1 {
@@ -78,6 +78,7 @@ text-align: center;
   border: 1px solid #dadde1;
   padding-top: 30px;
   padding-bottom: 30px;
+ 
 }
 ul {
   margin: 0;
