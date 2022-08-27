@@ -104,7 +104,8 @@ li:first-letter {
 }
 .weather-app-wrapper {
   max-width: 600px;
-  margin-left: 77px;
+  margin-left: 100px;
+  
 }
 
 .overview {
@@ -115,9 +116,12 @@ li:first-letter {
   margin-right: 5px;
   height: 64px;
   width: 64px;
+  margin-left: 70px;
   
 }
-
+.units {
+margin-left: 10px;
+}
 .weather-temperature strong {
   color: rgb(33, 33, 33);
   font-size: 64px;
