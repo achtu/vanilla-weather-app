@@ -48,7 +48,7 @@ function search(city){
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios(apiUrl).then(displayTemperature);
 }
-search("New York")
+//search("New York")
 function handleSubmit(event){
     event.preventDefault();
     let cityElement = document.querySelector("#text-input");
@@ -90,6 +90,7 @@ function displayForecast(response){
       "Thu", 
       "Fri",
     "Sat"];
+    
     forecast.forEach(function(forecastDay, index){
         if(index < 6){
     forecasrHTML = forecasrHTML + `
@@ -107,4 +108,21 @@ function displayForecast(response){
     forecasrHTML = forecasrHTML + `</div>`
     forecastElement.innerHTML = forecasrHTML;
 };
-displayForecast()
+//displayForecast()
+function showTemp(response) {
+    console.log(response.data);
+    displayTemperature(response)
+  };
+  
+  function handlePosition(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric`;
+    let apiKey = "f1cb380c1c026f0fa6c4898675e1a3ca";
+    axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemp);
+  };
+  function listenClick (){
+  navigator.geolocation.getCurrentPosition(handlePosition);
+  };
+document.querySelector("#submit-location-input").addEventListener("click", listenClick )
+
