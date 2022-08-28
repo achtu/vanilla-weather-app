@@ -2,7 +2,7 @@
 
 body, html {
   height: 100%;
-  background-color: rgb(187, 191, 189);
+  background-color: rgb(208, 209, 208);
 }
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("img/berg.jpg");
@@ -56,7 +56,8 @@ h1 {
 font-size: 62px;
 font-weight: 100;
 line-height: 28px;
-margin-bottom: 10;
+margin-bottom: 30px;
+margin-top: 20px;
 text-align: center;
 }
 #small {
@@ -75,7 +76,7 @@ text-align: center;
   border-radius: 15px;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #dadde1;
+  border: 1px solid #a0a0a0;
   padding-top: 30px;
   padding-bottom: 30px;
  
@@ -155,3 +156,4 @@ h2{
 .weather-forecsast-min {
   opacity: 60%;
 }
+
