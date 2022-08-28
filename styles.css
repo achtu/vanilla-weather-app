@@ -68,7 +68,7 @@ text-align: center;
   font-family: 'Quicksand', sans-serif;
   font-family: 'Raleway', sans-serif;
   font-weight: 200px;
-
+  text-decoration: none;
 
 }
 .container {
@@ -160,4 +160,16 @@ h2{
 .weather-forecsast-min {
   opacity: 60%;
 }
-
+#column  {
+  position: relative;
+  font-size: 16px;
+  top: -40px;
+  left: 290px;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200px;
+}
+#codelink {
+  text-decoration: none;
+}
