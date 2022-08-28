@@ -122,6 +122,10 @@ li:first-letter {
 }
 .units {
 margin-left: 10px;
+
+}
+#celcius-link, #fahrenheit-link {
+  text-decoration: none;
 }
 .weather-temperature strong {
   color: rgb(33, 33, 33);
