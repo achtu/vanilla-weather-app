@@ -28,12 +28,19 @@ body, html {
   padding-right: 30px;
   padding-top: 5px ;
   padding-bottom: 5px;
-  background-color: rgb(187, 191, 189);
+  background-color: rgb(208, 209, 208);
   border: 1px solid #dadde1;
   font-family: 'Inter', sans-serif;
   font-family: 'Quicksand', sans-serif;
   font-family: 'Raleway', sans-serif;
   font-weight: 200px;
+}
+#submit-input:hover{
+  background-image: none; 
+  background: transparent;
+  border-color: aliceblue;
+  background-color: transparent;
+  color: aliceblue;
 }
 #text-input {
   font-family: 'Inter', sans-serif;
@@ -45,7 +52,7 @@ body, html {
   padding-right: 70px;
   padding-top: 5px;
   padding-bottom: 5px;
-  background-color: rgb(187, 191, 189);
+  background-color: rgb(208, 209, 208);
   border: 1px solid #dadde1;
 }
 h1 {
@@ -174,7 +181,7 @@ h2{
   position: absolute;
   top: 0;
   right: 0;
-  background-color: rgb(187, 191, 189);
+  background-color: rgb(208, 209, 208);
   border: 1px solid #dadde1;
   border-radius: 30px;
   padding-left: 30px;
@@ -185,4 +192,11 @@ h2{
   font-family: 'Quicksand', sans-serif;
   font-family: 'Raleway', sans-serif;
   font-weight: 200px;
+}
+#submit-location-input:hover{
+  background-image: none; 
+  background: transparent;
+  border-color: aliceblue;
+  background-color: transparent;
+  color: aliceblue;
 }
